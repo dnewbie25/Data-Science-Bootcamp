@@ -38,11 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-<<<<<<< HEAD
 VIRTUAL_ENV="C:\Users\dmont\OneDrive\Documents\Data-Science-Bootcamp\M2\venv"
-=======
-VIRTUAL_ENV="C:\Users\dmont\Documents\Data-Science-Bootcamp\M2\venv"
->>>>>>> 81ee224406a817aa8ee18351ebdb18d892e5294d
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
