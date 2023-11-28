@@ -24,6 +24,7 @@ ON carrera = idCarrera
 ```
 Coneste la siguientes interrogantes:
   a. ¿Que campos permiten que se puedan acceder al nombre de la carrera?
+  
   b. ¿Que tipo de ralación existe entre el nombre la tabla cohortes y alumnos?
   c. ¿Proponga dos opciones para filtrar el listado solo por los alumnos que pertenecen a 'Full Stack Developer', utilizando LIKE y NOT LIKE?, ¿Cual de las dos opciones es la manera correcta de hacerlo?, ¿Por que?
   d. ¿Proponga dos opciones para filtrar el listado solo por los alumnos que pertenecen a 'Full Stack Developer', utilizando " = " y " != "?  ¿Cual de las dos opciones es la manera correcta de hacerlo?, ¿Por que?
