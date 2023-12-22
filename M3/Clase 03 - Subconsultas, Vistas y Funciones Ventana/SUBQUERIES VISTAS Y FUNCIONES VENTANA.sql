@@ -44,3 +44,24 @@ SELECT
 FROM henry_checkpoint_m3.venta v
 ORDER BY v.fecha; 
 
+-- venta acumulada a lo largo del dia
+SELECT 
+    v.idventa,
+    v.fecha,
+    v.cantidad * v.precio AS venta,
+    sum(v.cantidad * v.precio) over (partition by v.fecha rows between unbounded preceding and current row) as total_venta_promedio_acumulada
+FROM henry_checkpoint_m3.venta v
+ORDER BY v.fecha; 
+
+SELECT 
+    SUM(precio * cantidad)
+FROM
+    henry_checkpoint_m3.venta
+WHERE
+    fecha = '2019-01-01';
+
+-- hacer ranking
+select rank() over (partition by v.fecha order by precio*cantidad desc) as rank_ventas, v.fecha, v.precio*v.cantidad as venta_total from henry_checkpoint_m3.venta v;
+
+select dense_rank() over (partition by v.fecha order by precio*cantidad desc) as rank_ventas, v.fecha, v.precio*v.cantidad as venta_total from henry_checkpoint_m3.venta v;
+
